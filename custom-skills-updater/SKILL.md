@@ -53,7 +53,7 @@ Location: `REGISTRY.yaml` in the same directory as this `SKILL.md`.
 
 If it does not exist:
 
-1. If `REGISTRY.yaml.template` exists, copy it to `REGISTRY.yaml`
+1. If `REGISTRY.example.yaml` exists, copy it to `REGISTRY.yaml`
 2. Otherwise create with:
 ```yaml
 skills: {}
