@@ -10,7 +10,6 @@ Manages **manually installed skills not installed from ClawHub**.
 Supported types: `github-dir`, `github-file`, `github-readme`, `local`
 
 This skill **checks and updates existing skills only**. It does NOT create new skills.
-For skill creation, delegate to `skill-creator`.
 
 ---
 
@@ -158,9 +157,10 @@ gh api "repos/{owner}/{repo}/contents/{path}?ref={branch}" -H "Accept: applicati
 
 ## github-readme
 
-1. Download README using the same method as version detection
-2. If `skills/skill-creator/SKILL.md` exists, delegate conversion to it
-3. Otherwise save README directly as `skills/{name}/SKILL.md`
+1. Download the new README using the same method as version detection
+2. Compare the new README against the existing local README to identify changes
+3. Evaluate whether the changes contradict any statements in the current `SKILL.md`, or introduce important new information that should be reflected in `SKILL.md`
+4. Update `SKILL.md` only for the relevant parts based on the evaluation above
 
 ---
 
