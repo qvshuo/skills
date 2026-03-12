@@ -3,7 +3,7 @@ name: custom-skills-updater
 description: Manage manually installed skills (non-ClawHub). Supports checking updates, updating, and listing custom skills from GitHub or local sources.
 ---
 
-# Custom Skills Updater
+# custom-skills-updater
 
 Manages **manually installed skills not installed from ClawHub**.
 
