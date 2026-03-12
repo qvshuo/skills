@@ -16,7 +16,6 @@ Supported sources:
 * `local` — locally created skill (no remote source)
 
 This skill **manages existing skills only**.
-For generating skills from repositories or READMEs, use `skill-creator`.
 
 ## Requirement
 
