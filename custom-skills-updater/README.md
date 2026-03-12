@@ -49,7 +49,7 @@ skills:
     updated: 2026-01-01
 ```
 
-A example file `REGISTRY.example.yaml` is included.
+An example file `REGISTRY.example.yaml` is included.
 
 ## Typical Workflow
 
