@@ -1,4 +1,4 @@
-# Custom Skills Updater
+# custom-skills-updater
 
 Manage **manually installed skills** that are **not installed from ClawHub**.
 
@@ -49,7 +49,7 @@ skills:
     updated: 2026-01-01
 ```
 
-A template file `REGISTRY.yaml.template` is included.
+A example file `REGISTRY.example.yaml` is included.
 
 ## Typical Workflow
 
