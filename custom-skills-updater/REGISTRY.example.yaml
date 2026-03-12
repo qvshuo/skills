@@ -1,11 +1,9 @@
-# REGISTRY.yaml.template
-#
-# Custom Skills Updater Registry Template
+# REGISTRY.example.yaml
 #
 # Copy this file to REGISTRY.yaml if the registry does not exist.
 # The root key must be 'skills'. Do not rename it.
 #
-# This template demonstrates the expected structure for manually installed skills.
+# This example demonstrates the expected structure for manually installed skills.
 # Fields:
 # - type: github-dir / github-file / github-readme / local
 # - source: remote location or 'local'
