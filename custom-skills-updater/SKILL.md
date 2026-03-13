@@ -37,8 +37,15 @@ skill-name ........ update available
 Target all outdated skills or a specific skill by name.
 
 1. Run update check
-2. Update outdated skill(s)
-3. Update `REGISTRY.yaml`
+2. For each outdated skill, **notify the user before updating**:
+   - Skill name and type
+   - Summary of what changed (e.g. diff highlights, new commit description, or content delta)
+   - How the update will be applied (overwrite, merge, delegate to `skill-creator`, etc.)
+   - **Wait for explicit user approval** before proceeding
+3. Update approved skill(s)
+4. Update `REGISTRY.yaml`
+
+If the user cannot respond immediately (e.g. scheduled/automated run, no active session), **do not execute updates**. Instead, write a summary of pending updates (skill name, change description, proposed action) and leave it for the user to review and approve later.
 
 ## List installed skills
 
@@ -159,9 +166,11 @@ gh api "repos/{owner}/{repo}/contents/{path}?ref={branch}" -H "Accept: applicati
 
 1. Download the new README using the same method as version detection
 2. Compare the new README against the existing local README to identify changes
-3. Evaluate whether the changes contradict any statements in the current `SKILL.md`, or introduce important new information that should be reflected in `SKILL.md`
-4. Update `SKILL.md` only for the relevant parts based on the evaluation above
-
+3. Assess change scope:
+   - **Major changes** (structural changes, new/removed sections, significant content rewrites): check if the `skill-creator` skill is installed. If yes, delegate the SKILL.md update to `skill-creator` with the new README as input. If `skill-creator` is not installed, fall through to step 4.
+   - **Minor changes** (wording tweaks, small additions): proceed to step 4 directly.
+4. Evaluate whether the changes contradict any statements in the current `SKILL.md`, or introduce important new information that should be reflected in `SKILL.md`
+5. Update the skill only for the relevant parts based on the evaluation above.
 ---
 
 # Error Handling and Safety
