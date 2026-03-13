@@ -55,6 +55,9 @@ An example file `REGISTRY.example.yaml` is included.
 1. Install a skill manually
 2. Register it in `REGISTRY.yaml`
 3. Use this skill to check or update it
+4. Review and approve proposed updates before they are applied
+
+In scheduled or unattended runs, pending updates are summarized and deferred until the user reviews them.
 
 ## Scope
 
