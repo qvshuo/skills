@@ -67,7 +67,7 @@ tiger-tv.py fetch --source "🎬金鹰点播" --vod_id 104571
 --socket-timeout 30 --ignore-errors
 ```
 
-**批量下载**：优先使用单次 `yt-dlp` 批量下载多集，以充分利用带宽；单次调用中，每集对应一组 `-o <输出路径> <URL>`。为兼顾效率与稳定性，单批最多下载 10 集；若需下载更多集数，则按每批最多 10 集拆分并依次执行。例如下载 40 集时，应分 4 次进行，每次下载 10 集，而不是逐集单独下载。
+命令示例：
 
 ```bash
 mkdir -p ~/Downloads/小老虎爱看剧/逐玉/Season\ 1
@@ -75,10 +75,7 @@ yt-dlp \
   --retries 20 --retry-sleep 5 \
   --concurrent-fragments 16 --fragment-retries 20 \
   --socket-timeout 30 --ignore-errors \
-  -o "~/Downloads/小老虎爱看剧/逐玉/Season 1/S01E01.mp4" "https://example.com/ep01.m3u8" \
-  -o "~/Downloads/小老虎爱看剧/逐玉/Season 1/S01E02.mp4" "https://example.com/ep02.m3u8" \
-  -o "~/Downloads/小老虎爱看剧/逐玉/Season 1/S01E03.mp4" "https://example.com/ep03.m3u8"
-# …每集追加一对 -o <路径> <URL>
+  -o "~/Downloads/小老虎爱看剧/逐玉/Season 1/S01E01.mp4" "https://example.com/ep01.m3u8"
 ```
 
 ### 4. 生成 Quantumult X 规则
