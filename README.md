@@ -1,8 +1,8 @@
 # skills
 
-### custom-skills-updater
+### skill-manager
 
-Manage manually installed skills that are not installed from ClawHub.
+帮助管理来自 GitHub 仓库的技能安装、检查更新、更新和卸载。
 
 ### tiger-tv
 
